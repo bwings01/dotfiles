@@ -2,6 +2,6 @@
 Name=★ GitHub
 Exec=/home/braeden/.config/.scripts/github-launch.sh
 Icon=/home/braeden/.local/share/icons/github.png
+Terminal=false
 Type=Application
-StartupNotify=true
 Categories=Favorites;
