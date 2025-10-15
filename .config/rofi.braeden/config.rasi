@@ -1,0 +1,31 @@
+configuration {
+    /* General setup */
+    font: "JetBrainsMono ExtraBold";
+    show-icons: true;
+    icon-theme: "Papirus-Dark";
+    display-drun: "Apps:";
+    display-run: "Run:";
+    display-window: "Windows:";
+    display-ssh: "SSH:";
+    display-launcher: "Launcher:";
+    display-power: "Power:";
+    modi: "drun,window";
+
+    /* Behavior */
+    matching: "fuzzy";
+    cycle: true;
+    sidebar-mode: true;
+    case-sensitive: false;
+    auto-select: false;
+
+    /* Appearance */
+    lines: 10;
+    columns: 1;
+    location: 0;
+    fullscreen: false;
+    fixed-num-lines: true;
+    hide-scrollbar: false;
+}
+
+/* Apply your theme outside the configuration block */
+@theme "style"

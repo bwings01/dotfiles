@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=★ ChatGPT
+GenericName=AI Chat Assistant
+Comment=OpenAI ChatGPT web app
+Exec=/home/braeden/.config/.scripts/chatgpt-launch.sh
+Icon=/home/braeden/.local/share/icons/chatgpt.png
+Terminal=false
+Type=Application
+StartupNotify=true
+Categories=Favorites;

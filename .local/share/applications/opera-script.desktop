@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=★ Opera
+Comment=Open Opera on workspace 1
+Exec=/home/braeden/.config/.scripts/opera-launch.sh
+Icon=/home/braeden/.config/rofi.braeden/icons/opera.png
+Terminal=false
+Type=Application
+Categories=Favorites;

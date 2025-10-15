@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=★ Spotify
+Comment=Open Spotify on workspace 3
+Exec=/home/braeden/.config/.scripts/spotify-launch.sh
+Icon=/home/braeden/.config/rofi.braeden/icons/spotify.png
+Terminal=false
+Type=Application
+Categories=Favorites;

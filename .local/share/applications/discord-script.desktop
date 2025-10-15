@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=★ Discord
+Comment=Open Discord on workspace 2
+Exec=/home/braeden/.config/.scripts/discord-launch.sh
+Icon=/home/braeden/.config/rofi.braeden/icons/discord.png
+Terminal=false
+Type=Application
+Categories=Favorites;

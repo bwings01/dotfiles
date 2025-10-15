@@ -1,0 +1,180 @@
+{
+  "layer": "top",
+  "position": "top",
+  "modules-left": ["custom/updates", "clock", "custom/spacer", "memory", "custom/spacer", "cpu", "custom/spacer", "temperature", "custom/spacer", "hyprland/window"],
+  "modules-center": ["hyprland/workspaces"],
+  "modules-right": ["custom/spotify", "network", "pulseaudio"],
+  "reload_style_on_change": true,
+
+
+/* custom */
+
+  "custom/logo": {
+    "format": ""
+  },
+
+  "custom/spacer": {
+    "format": " | "
+  },
+
+  "custom/updates": {
+    "format": "\uDB81\uDEB0 | {text}",
+    "return-type": "json",
+    "escape": true,
+    "tooltip": true,
+    "exec": "/home/braeden/.config/waybar/scripts/myUpdates.sh",
+    "interval": 1,
+    "signal": 1,
+    "hide-empty-text": true,
+    "on-click": "/home/braeden/.config/waybar/scripts/update_system.sh"
+  },
+
+  "custom/power": {
+    "format": "\uF011",
+    "tooltip": false,
+    "on-click": "~/.config/rofi.braeden/rofi/scripts/powermenu_t1"
+  },
+
+  "custom/spotify": {
+    "format": "♪ {text}",
+    "tooltip": true,
+    "tooltip-format": "Click to open Spotify\nScroll for prev/next song\nRight-Click to pause",
+    "exec": "~/.config/waybar/scripts/mediaplayer.sh",
+    "exec-if": "pgrep spotify",
+    "return-type": "json",
+    "on-click": "~/.config/.scripts/spotify-launch.sh",
+    "on-click-right": "playerctl -p spotify play-pause",
+    "on-scroll-up": "playerctl -p spotify next",
+    "on-scroll-down": "playerctl -p spotify previous",
+    "interval": 1
+  },
+
+
+  /* left modules */
+
+  "clock": {
+    "format": "{:%I:%M %p}",
+    "format-alt": "{:%m/%d/%Y | %I:%M:%S %p}",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "calendar": {
+      "mode": "month",
+      "mode-mon-col": 3,
+      "weeks-pos": "right",
+      "on-scroll": 1,
+      "on-click-right": "mode",
+      "format": {
+        "months": "<span color='#ffead3'><b>{}</b></span>",
+        "days": "<span color='#ecc6d9'><b>{}</b></span>",
+        "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
+        "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+        "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
+      }
+    },
+    "interval": 60
+  },
+
+  "network": {
+    "format-wifi": "󰤨",
+    "interval": 2,
+    "format-ethernet": "\uEB01 {bandwidthTotalBits}",
+    "format-linked": "\uEB01 {ifname} (No IP)",
+    "format-disconnected": "󰤭",
+    "format-alt": "\uEB01 {ifname}: {ipaddr}/{cidr}",
+    "tooltip": true,
+    "tooltip-format": "{essid}",
+    "on-click-right": "nm-connection-editor"
+  },
+
+  "cpu": {
+    "interval": 1,
+    "format": "  {usage}%",
+    "min-length": 6,
+    "max-length": 6,
+    "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
+    "tooltip": true,
+    "tooltip-format": "CPU Usage: {usage}%"
+  },
+
+  "memory": {
+    "format": "  {percentage}%",
+    "tooltip": true,
+    "tooltip-format": "{used}gb/{total}gb"
+  },
+
+  "temperature": {
+	"thermal-zone": 2,
+	"hwmon-path": ["/sys/class/hwmon/hwmon0/temp1_input", "/sys/class/thermal/thermal_zone0/temp"],
+	"critical-threshold": 80,
+	"format-critical": " {temperatureC}°C",
+	"format": " {temperatureC}°C",
+    "tooltip": false
+  },
+
+  "hyprland/window": {
+    "format": "( {class} ) ",
+    "max-length": 30,
+    "separate-outputs": true,
+    "tooltip": false
+  },
+
+  /* center modules */
+
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+      "6": "\uF1FF",
+      "7": "\uDB81\uDCC7",
+      "5": "\uDB85\uDE9D",
+      "2": "\uE848",
+      "3": "\uF121 ",
+      "4": "\uF09B",
+      "1": "\uF26A"
+    },
+    "persistent-workspaces": {
+      "DP-2": [1,2,3,4,5],
+      "HDMI-A-1": [6,7,8,9]
+    }
+  },
+
+/* right modules */
+
+  "pulseaudio": {
+    "format": "{volume}% {icon}",
+    "format-bluetooth": "󰂰",
+    "format-muted": "\uD83D\uDD07",
+    "format-icons": {
+      "headphones": "",
+      "bluetooth": "󰥰",
+      "handsfree": "",
+      "headset": "󱡬",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": ["🕨","🕩","🕪"]
+    },
+    "on-click": "amixer sset Master toggle",
+    "on-click-right": "pavucontrol"
+  },
+
+  "tray": {
+    "icon-size": 24,
+    "spacing": 5,
+    "show-passive-items": true,
+    "show-active-items": true,
+    "icons": {
+      "notion-desktop": "/home/braeden/.local/share/icons/hicolor/256x256/apps/icon.png"
+    }
+  },
+
+
+  "wlr/taskbar": {
+    "format": "{icon}",
+    "all-outputs": true,
+    "icon-size": 20,
+    "icon-theme": "Numix-Circle",
+    "on-click": "activate",
+    "on-click-middle": "close",
+    "on-click-right": "minimize",
+    "ignore-list": ["kitty", "waybar", "Picture in Picture", "rofi", "~"]
+    }
+}

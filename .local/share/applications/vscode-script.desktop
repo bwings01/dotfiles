@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=★ VSCode
+Comment=Open VS Code on workspace 4
+Exec=/home/braeden/.config/.scripts/vscode-launch.sh
+Icon=/home/braeden/.config/rofi.braeden/icons/vscode.png
+Terminal=false
+Type=Application
+Categories=Favorites;

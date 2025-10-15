@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=★ GitHub
+Exec=/home/braeden/.config/.scripts/github-launch.sh
+Icon=/home/braeden/.local/share/icons/github.png
+Type=Application
+StartupNotify=true
+Categories=Favorites;

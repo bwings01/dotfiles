@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=★ Notion
+Exec=/home/braeden/.config/.scripts/notion-launch.sh
+Icon=/home/braeden/.local/share/icons/notion.png
+Type=Application
+StartupNotify=true
+Categories=Favorites;
