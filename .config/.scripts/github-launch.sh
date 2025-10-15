@@ -2,7 +2,7 @@
 
 # --- Launch GitHub ---
 hyprctl dispatch workspace 4
-if ! pgrep -f "chromium.*github" >/dev/null; then
+if ! pgrep -fa "chromium.*github" >/dev/null; then
   nohup env GDK_BACKEND=x11 chromium \
     --user-data-dir=/home/braeden/.config/chromium-endeavour \
     --app="https//github.com" \
