@@ -7,7 +7,7 @@ if ! pgrep -f "chromium.*github" >/dev/null; then
     --user-data-dir=/home/braeden/.config/chromium-endeavour \
     --app="https//github.com" \
     --class=github --name=github --new-window \
-    >/dev/nukk 2>&1 &
+    >/dev/null 2>&1 &
 else
   hyprctl dispatch focuswindow "chromium.*github"
 fi
