@@ -1,6 +1,46 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+# --- WiFi setup (if needed) ---
+echo "Checking for NetworkManager / nmcli..."
+if ! command -v nmcli &>/dev/null; then
+  echo "nmcli not found — installing NetworkManager..."
+  sudo pacman -S --needed networkmanager --noconfirm
+  sudo systemctl enable --now NetworkManager
+fi
+
+# Poll for interface
+echo "Listing wireless devices:"
+nmcli device status
+
+# Prompt for SSID / password
+read -rp "WiFi SSID: " WIFI_SSID
+read -rsp "WiFi Password: " WIFI_PASS
+echo
+
+echo "Connecting to WiFi..."
+nmcli device wifi connect "$WIFI_SSID" password "$WIFI_PASS"
+
+echo "Waiting for network..."
+for i in {1..10}; do
+  if ping -c 1 google.com &>/dev/null; then
+    echo "Network OK!"
+    break
+  else
+    echo "Waiting... ($i/10)"
+    sleep 2
+  fi
+done
+
+# (Optional) If not connected by now, exit
+if ! ping -c 1 google.com &>/dev/null; then
+  echo "ERROR: Could not connect to network. Aborting installation."
+  exit 1
+fi
+
+echo "WiFi connected, proceeding with installation..."
+
+# --- rest of your script continues here ---
 if [[ $EUID -ne 0 ]]; then
   echo "Please run this script as root: "
   echo " sudo bash $0"
