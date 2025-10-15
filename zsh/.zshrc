@@ -84,7 +84,12 @@ alias print_colors='~/.config/alacritty/themes/print_colors.sh'
 alias tmuxreload='tmux source ~/.config/tmux/tmux.conf'
 alias zshreload='source ~/.zshrc'
 alias detach='tmux detach'
+alias zshconf='nvim ~/.zshrc'
+alias lazy="lazygit"
 
 # Shell integrations
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
+
+
+export PATH="$HOME/.config/.scripts:$PATH"
