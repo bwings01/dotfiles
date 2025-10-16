@@ -1,6 +1,6 @@
 configuration {
     /* General setup */
-    font: "JetBrainsMono ExtraBold";
+    font: "JetBrains Mono ExtraBold 10";
     show-icons: true;
     icon-theme: "Papirus-Dark";
     display-drun: "Apps:";
