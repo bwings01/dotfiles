@@ -93,3 +93,42 @@ eval "$(zoxide init --cmd cd zsh)"
 
 
 export PATH="$HOME/.config/.scripts:$PATH"
+
+# ───────────────────────────────
+# Zsh Syntax Highlighting — Monochrome Override
+# ───────────────────────────────
+
+# Make sure the highlighter is active
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main)
+
+typeset -A ZSH_HIGHLIGHT_STYLES
+
+# Commands and builtins (light gray)
+ZSH_HIGHLIGHT_STYLES[command]='fg=250'
+ZSH_HIGHLIGHT_STYLES[builtin]='fg=250'
+ZSH_HIGHLIGHT_STYLES[alias]='fg=250'
+ZSH_HIGHLIGHT_STYLES[function]='fg=250'
+
+# Options and arguments (medium gray)
+ZSH_HIGHLIGHT_STYLES[single-hyphen-option]='fg=244'
+ZSH_HIGHLIGHT_STYLES[double-hyphen-option]='fg=244'
+
+# Paths (underlined light gray)
+ZSH_HIGHLIGHT_STYLES[path]='fg=245,underline'
+ZSH_HIGHLIGHT_STYLES[path_prefix]='fg=240'
+
+# Quoted strings
+ZSH_HIGHLIGHT_STYLES[single-quoted-argument]='fg=245'
+ZSH_HIGHLIGHT_STYLES[double-quoted-argument]='fg=245'
+
+# Command separators, redirection, comments
+ZSH_HIGHLIGHT_STYLES[separator]='fg=240'
+ZSH_HIGHLIGHT_STYLES[redirection]='fg=240'
+ZSH_HIGHLIGHT_STYLES[comment]='fg=238'
+
+# Unknown tokens (dim gray)
+ZSH_HIGHLIGHT_STYLES[unknown-token]='fg=239,bold'
+
+# Reserved words and defaults
+ZSH_HIGHLIGHT_STYLES[reserved-word]='fg=252,bold'
+ZSH_HIGHLIGHT_STYLES[default]='fg=250'
