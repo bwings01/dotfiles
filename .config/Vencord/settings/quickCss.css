@@ -25,7 +25,7 @@ body {
     --border-thickness: 1px; /* thickness of borders around main panels. DOES NOT AFFECT OTHER BORDERS */
 
     /* animation/transition options */
-    --animations: on; /* off: disable animations/transitions, on: enable animations/transitions */
+    --animations: off; /* off: disable animations/transitions, on: enable animations/transitions */
     --list-item-transition: 0.2s ease; /* transition for list items */
     --dms-icon-svg-transition: 0.4s ease; /* transition for the dms icon */
     --border-hover-transition: 0.2s ease; /* transition for borders when hovered */
@@ -58,7 +58,7 @@ body {
     /* transparency/blur options */
     /* NOTE: TO USE TRANSPARENCY/BLUR, YOU MUST HAVE TRANSPARENT BG COLORS. FOR EXAMPLE: --bg-4: hsla(220, 15%, 10%, 0.7); */
     --transparency-tweaks: on; /* off: no changes, on: remove some elements for better transparency */
-    --remove-bg-layer: on; /* off: no changes, on: remove the base --bg-3 layer for use with window transparency (WILL OVERRIDE BACKGROUND IMAGE) */
+    --remove-bg-layer: off; /* off: no changes, on: remove the base --bg-3 layer for use with window transparency (WILL OVERRIDE BACKGROUND IMAGE) */
     --panel-blur: on; /* off: no changes, on: blur the background of panels */
     --blur-amount: 12px; /* amount of blur */
     --bg-floating: hsl(0, 0%, 0%); /* set this to a more opaque color if floating panels look too transparent. only applies if panel blur is on  */
