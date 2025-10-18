@@ -58,7 +58,7 @@ mainbox {
 /*****----- Imagebox -----*****/
 imagebox {
     background-color:            transparent;
-    background-image:            url("~/Downloads/org13.png", width);
+    background-image:            url("~/Downloads/forest.jpeg", height);
     children:                    [ "dummy", "inputbar", "dummy" ];
 }
 

@@ -57,7 +57,7 @@ mainbox {
 imagebox {
     padding: 20px;
     background-color: transparent;
-    background-image: url("~/Downloads/seph.png", width);
+    background-image: url("~/Downloads/power.jpg", height);
     orientation: vertical;
     children: [ "inputbar", "dummy", "mode-switcher" ];
 }

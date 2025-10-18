@@ -10,21 +10,22 @@ text = "CellForeground"
 background = "#ffffff"
 
 [colors.normal]
-black = "#363b54"
-red = "#f7768e"
-green = "#41a6b5"
-yellow = "#e0af68"
-blue = "#7aa2f7"
-magenta = "#bb9af7"
-cyan = "#7dcfff"
-white = "#dadada"
+black = "#1a1a1a"      # deep black for background-heavy areas
+red = "#3a3a3a"        # dark gray accent (was red)
+green = "#5a5a5a"      # medium gray (was green)
+yellow = "#7a7a7a"     # mid-light gray (was yellow)
+blue = "#9a9a9a"       # lighter gray (was blue)
+magenta = "#b5b5b5"    # soft light gray (was magenta)
+cyan = "#d0d0d0"       # near-white highlight gray (was cyan)
+white = "#e5e5e5"      # bright white for readable text
 
 [colors.bright]
-black = "#363b54"
-red = "#f7768e"
-green = "#41a6b5"
-yellow = "#e0af68"
-blue = "#7aa2f7"
-magenta = "#bb9af7"
-cyan = "#7dcfff"
-white = "#dadada"
+black = "#2a2a2a"      # slightly lighter than normal black
+red = "#4a4a4a"        # deeper mid-gray
+green = "#6a6a6a"      # mid-gray
+yellow = "#8a8a8a"     # softer light gray
+blue = "#aaaaaa"       # brighter gray
+magenta = "#c5c5c5"    # very light gray
+cyan = "#dadada"       # almost white
+white = "#f0f0f0"      # pure white highlight
+

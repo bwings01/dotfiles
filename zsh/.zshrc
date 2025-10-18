@@ -132,3 +132,17 @@ ZSH_HIGHLIGHT_STYLES[unknown-token]='fg=239,bold'
 # Reserved words and defaults
 ZSH_HIGHLIGHT_STYLES[reserved-word]='fg=252,bold'
 ZSH_HIGHLIGHT_STYLES[default]='fg=250'
+
+# ───────────────────────────────
+# Fastfetch inside Tmux startup (fixed for newer versions)
+# ───────────────────────────────
+
+if [[ -n "$TMUX" && -z "$FASTFETCH_SHOWN" ]]; then
+  export FASTFETCH_SHOWN=1
+  clear
+  # Newer Fastfetch auto-detects color; just make sure it’s not suppressed
+  fastfetch --pipe auto --multithreading true
+  echo
+fi
+
+
