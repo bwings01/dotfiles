@@ -6,7 +6,7 @@
     color: #000000;
     min-height: 25px;
     margin: 0;
-    padding: 0;
+    padding: 1px;
 }
 
 window#waybar {
@@ -186,5 +186,6 @@ window#waybar {
     transition: all 250ms ease-in-out, background 0.2s ease, transform 25s ease;
     min-width: 50px;
     border: 2px solid #000000;
+    border-radius: 5px;
     background: transparent;
 }
