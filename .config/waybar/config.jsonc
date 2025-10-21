@@ -1,7 +1,7 @@
 {
   "layer": "top",
   "position": "top",
-  "modules-left": ["custom/updates", "clock", "custom/spacer", "memory", "custom/spacer", "cpu", "custom/spacer", "temperature", "custom/spacer", "hyprland/window"],
+  "modules-left": ["clock", "custom/spacer", "memory", "custom/spacer", "cpu", "custom/spacer", "temperature", "custom/spacer", "hyprland/window", "custom/updates"],
   "modules-center": ["hyprland/workspaces"],
   "modules-right": ["custom/spotify", "network", "pulseaudio"],
   "reload_style_on_change": true,
@@ -23,7 +23,7 @@
     "escape": true,
     "tooltip": true,
     "exec": "/home/braeden/.config/waybar/scripts/myUpdates.sh",
-    "interval": 1,
+    "interval": 60,
     "signal": 1,
     "hide-empty-text": true,
     "on-click": "/home/braeden/.config/waybar/scripts/update_system.sh"
@@ -36,11 +36,10 @@
   },
 
   "custom/spotify": {
-    "format": "♪ {text}",
+    "format": " ♪ {text} ",
     "tooltip": true,
     "tooltip-format": "Click to open Spotify\nScroll for prev/next song\nRight-Click to pause",
     "exec": "~/.config/waybar/scripts/mediaplayer.sh",
-    "exec-if": "pgrep spotify",
     "return-type": "json",
     "on-click": "~/.config/.scripts/spotify-launch.sh",
     "on-click-right": "playerctl -p spotify play-pause",
@@ -76,7 +75,7 @@
   "network": {
     "format-wifi": "󰤨",
     "interval": 2,
-    "format-ethernet": "\uEB01 {bandwidthTotalBits}",
+    "format-ethernet": " \uEB01 {bandwidthTotalBits} ",
     "format-linked": "\uEB01 {ifname} (No IP)",
     "format-disconnected": "󰤭",
     "format-alt": "\uEB01 {ifname}: {ipaddr}/{cidr}",
@@ -87,7 +86,7 @@
 
   "cpu": {
     "interval": 1,
-    "format": "  {usage}%",
+    "format": "  {icon}",
     "min-length": 6,
     "max-length": 6,
     "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
@@ -99,7 +98,8 @@
   "memory": {
     "format": "  {percentage}%",
     "tooltip": true,
-    "tooltip-format": "{used}gb/{total}gb"
+    "tooltip-format": "{used}gb/{total}gb",
+    "on-click": "kitty btop &"
   },
 
   "temperature": {
@@ -141,7 +141,7 @@
 /* right modules */
 
   "pulseaudio": {
-    "format": "{volume}% {icon}",
+    "format": "{volume}%",
     "format-bluetooth": "󰂰",
     "format-muted": "\uD83D\uDD07",
     "format-icons": {
@@ -157,17 +157,6 @@
     "on-click": "amixer sset Master toggle",
     "on-click-right": "pavucontrol"
   },
-
-  "tray": {
-    "icon-size": 24,
-    "spacing": 5,
-    "show-passive-items": true,
-    "show-active-items": true,
-    "icons": {
-      "notion-desktop": "/home/braeden/.local/share/icons/hicolor/256x256/apps/icon.png"
-    }
-  },
-
 
   "wlr/taskbar": {
     "format": "{icon}",
