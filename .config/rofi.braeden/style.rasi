@@ -40,7 +40,7 @@ window {
 
     /* properties for all widgets */
     enabled:                     true;
-    border-radius:               15px;
+    border-radius:               30px;
     cursor:                      "default";
     background-color:            @background;
 }
@@ -117,8 +117,8 @@ button-favorites {
     cursor:                      pointer;
 }
 button-favorites selected {
-    background-color:            @selected;
-    text-color:                  @foreground;
+    background-color:            @foreground;
+    text-color:                  @background;
 }
 
 button {
@@ -129,8 +129,8 @@ button {
     cursor:                      pointer;
 }
 button selected {
-    background-color:            @selected;
-    text-color:                  @foreground;
+    background-color:            @foreground;
+    text-color:                  @background;
 }
 
 /*****----- Listview -----*****/
@@ -155,9 +155,9 @@ listview {
 /*****----- Elements -----*****/
 element {
     enabled:                     true;
-    spacing:                     15px;
+    spacing:                     8px;
     padding:                     8px;
-    border-radius:               10px;
+    border-radius:               30px;
     border:                      0px solid;
     background-color:            transparent;
     text-color:                  @foreground;
@@ -176,7 +176,7 @@ element normal.active {
     text-color:                  @foreground;
 }
 element selected.normal {
-    background-color:            transparent;
+    background-color:            @active;
     border-color:                @selected;
     border:                      2px solid;
     text-color:                  @foreground;
