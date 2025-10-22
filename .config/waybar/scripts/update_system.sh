@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-kitty --hold bash -c 'sudo pacman -Syu; echo; read -p "Press Enter to close..."'
+kitty bash -c 'echo "🔄 Updating system packages..."; if ! sudo pacman -Syu --noconfirm; then echo; echo "❌ pacman update failed. Press Enter to close..."; read; exit 1; fi; echo; echo "🔧 Updating AUR packages..."; if ! yay -Sua --noconfirm; then echo; echo "❌ AUR update failed. Press Enter to close..."; read; exit 1; fi; echo; echo "✅ All updates complete!"; notify-send "System Updated" "All packages are up to date ✅"; sleep 2;'

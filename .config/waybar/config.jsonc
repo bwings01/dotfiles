@@ -1,7 +1,7 @@
 {
   "layer": "top",
   "position": "top",
-  "modules-left": ["clock", "custom/spacer", "memory", "custom/spacer", "cpu", "custom/spacer", "temperature", "custom/spacer", "hyprland/window", "custom/updates"],
+  "modules-left": ["clock", "custom/spacer", "memory", "custom/spacer", "cpu", "custom/spacer", "temperature", "custom/spacer", "custom/updates", "hyprland/window"],
   "modules-center": ["hyprland/workspaces"],
   "modules-right": ["custom/spotify", "network", "pulseaudio"],
   "reload_style_on_change": true,
