@@ -38,8 +38,8 @@ window {
     y-offset:                    0px;
     margin:                      0px;
     padding:                     0px;
-    border:                      0px solid;
-    border-radius:               8px;
+    border:                      2px solid;
+    border-radius:               15px;
     border-color:                @background;
     cursor:                      "default";
     background-color:            @background;
@@ -101,7 +101,7 @@ message {
     margin:                      0px;
     padding:                     10px;
     border:                      2px solid;
-    border-radius:               0px;
+    border-radius:               15px;
     border-color:                @selected;
     background-color:            @background-alt;
     text-color:                  @foreground;

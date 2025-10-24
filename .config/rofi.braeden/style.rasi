@@ -40,7 +40,9 @@ window {
 
     /* properties for all widgets */
     enabled:                     true;
+    border:                      2px solid;
     border-radius:               15px;
+    border-color:                @background;
     cursor:                      "default";
     background-color:            @background;
 }
