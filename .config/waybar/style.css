@@ -27,6 +27,7 @@ window#waybar {
 #custom-updates,
 #memory,
 #workspaces,
+#custom-notification,
 #taskbar {
     padding: 2px;
     margin: 2px;
@@ -37,7 +38,18 @@ tooltip label {
 }
 /* //Padding and Customizations// */
 
+/* notifications */
 
+#custom-notification {
+    border-radius: 5px;
+    transition: all 250ms ease-in-out, background 0.2s ease, transform 25s;
+}
+
+#custom-notification:hover {
+    background-color: #000000;
+    color: #ffffff;
+    min-width: 30px;
+}
 /* clock */
 
 #clock {

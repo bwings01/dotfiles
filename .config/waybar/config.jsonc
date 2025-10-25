@@ -3,7 +3,7 @@
   "position": "top",
   "modules-left": ["clock", "custom/spacer", "memory", "custom/spacer", "cpu", "custom/spacer", "temperature", "custom/spacer", "custom/updates", "hyprland/window"],
   "modules-center": ["hyprland/workspaces"],
-  "modules-right": ["custom/spotify", "network", "pulseaudio"],
+  "modules-right": ["custom/spotify", "network", "pulseaudio", "custom/notification"],
   "reload_style_on_change": true,
 
 
@@ -48,6 +48,26 @@
     "interval": 1
   },
 
+  "custom/notification": {
+    "tooltip": true,
+    "format": "<span size='12pt'>{icon}</span>",
+    "format-icons": {
+      "notification": "󱅫",
+      "none": "󰂜",
+      "dnd-notification": "󰂠",
+      "dnd-none": "󰪓",
+      "inhibited-notification": "󰂛",
+      "inhibited-none": "󰪑",
+      "dnd-inhibited-notification": "󰂛",
+      "dnd-inhibited-none": "󰪑"
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true
+  },
 
   /* left modules */
 
