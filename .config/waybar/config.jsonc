@@ -14,7 +14,8 @@
   },
 
   "custom/spacer": {
-    "format": " | "
+    "format": " | ",
+    "tooltip": false
   },
 
   "custom/updates": {
@@ -50,7 +51,7 @@
 
   "custom/notification": {
     "tooltip": true,
-    "format": "<span size='12pt'>{icon}</span>",
+    "format": "<span size='10pt'> {icon} </span>",
     "format-icons": {
       "notification": "󱅫",
       "none": "󰂜",

@@ -42,13 +42,14 @@ tooltip label {
 
 #custom-notification {
     border-radius: 5px;
+    background-color: #808080;
     transition: all 250ms ease-in-out, background 0.2s ease, transform 25s;
 }
 
 #custom-notification:hover {
     background-color: #000000;
     color: #ffffff;
-    min-width: 30px;
+    min-width: 45px;
 }
 /* clock */
 
