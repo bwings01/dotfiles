@@ -1,76 +1,94 @@
-[bell]
-animation = "EaseOutExpo"
-duration = 0
+# ──────────────────────────────────────────────
+# Kitty Configuration — Monochrome Theme (from Alacritty)
+# ──────────────────────────────────────────────
 
-[colors]
-draw_bold_text_with_bright_colors = true
-
-
-[cursor]
-blink_interval = 500
-blink_timeout = 5
-unfocused_hollow = false
-
-[cursor.style]
-blinking = "Off"
-shape = "Block"
-
-[env]
-TERM = "xterm-256color"
-
-[font]
-size = 10
-
-[font.normal]
-family = "JetBrainsMono Nerd Font"
-style = "ExtraBold"
-
-[font.bold]
-family = "JetBrainsMono Nerd Font"
-style = "ExtraBold"
-
-[font.italic]
-family = "JetBrainsMono Nerd Font"
-style = "Italic"
-
-[font.offset]
-x = 0
-y = 0
-
-[font.glyph_offset]
-x = 0
-y = 0
-
-[mouse]
-hide_when_typing = true
-
-[[mouse.bindings]]
-action = "PasteSelection"
-mouse = "Middle"
-
-[selection]
-semantic_escape_chars = ",│`|:\"' ()[]{}<>"
-
-[terminal.shell]
-program = "/bin/zsh"
-args = ["--login", "-c", "tmux attach || tmux"]
+# ───────────────────────────────
+# Fonts — JetBrainsMono Nerd Font ExtraBold
+# ───────────────────────────────
+font_family JetBrainsMono Nerd Font
+bold_font JetBrainsMono Nerd Font ExtraBold
+italic_font JetBrainsMono Nerd Font ExtraBold Italic
+bold_italic_font JetBrainsMono Nerd Font ExtraBold Italic
+font_size 10
+bold_font same_as_regular
+modify_font weight 800
 
 
-[window]
-decorations = "full"
-dynamic_title = true
-startup_mode = "Maximized"
+# Cursor
+cursor_shape block
+cursor_trail 1
+cursor_trail_decay 0.1 0.9
+cursor_trail_start_threshold 10
+cursor_shape_unfocused hollow
 
-[window.dimensions]
-columns = 160
-lines = 80
+# Shell and environment
+clear_all_env yes
+env TERM xterm-256color
 
-[window.padding]
-x = 4
-y = 4
+# Scrolling and behavior
+scrollback_lines 2000
+enable_audio_bell no
+hide_window_decorations no
+dynamic_background_opacity yes
 
-[general]
-live_config_reload = true
-import = [
-    "~/.config/alacritty/themes/themes/tokyo_night_enhanced.toml"
-]
+# Window layout
+window_padding_width 10
+background_opacity 1.0
+startup_session none
+remember_window_size yes
+
+# Tab bar
+tab_bar_edge bottom
+tab_bar_style slant
+tab_bar_align left
+tab_fade 0.25 0.5 0.75 1
+tab_bar_margin_width 0.0
+tab_bar_margin_height 0.0 0.0
+active_tab_foreground   #ffffff
+active_tab_background   #545454
+inactive_tab_foreground #969696
+inactive_tab_background #2f2f2f
+
+# URL styling
+url_color #0087bd
+url_style curly
+detect_urls yes
+underline_hyperlinks hover
+open_url_with default
+
+# ──────────────────────────────────────────────
+# Colors (Monochrome from Alacritty)
+# ──────────────────────────────────────────────
+
+foreground #ffffff
+background #000000
+selection_foreground #000000
+selection_background #ffffff
+cursor #ffffff
+cursor_text_color #000000
+
+# Normal colors
+color0  #1a1a1a
+color1  #3a3a3a
+color2  #5a5a5a
+color3  #7a7a7a
+color4  #9a9a9a
+color5  #b5b5b5
+color6  #d0d0d0
+color7  #e5e5e5
+
+# Bright colors
+color8  #2a2a2a
+color9  #4a4a4a
+color10 #6a6a6a
+color11 #8a8a8a
+color12 #aaaaaa
+color13 #c5c5c5
+color14 #dadada
+color15 #f0f0f0
+
+# ──────────────────────────────────────────────
+# Misc
+# ──────────────────────────────────────────────
+active_border_color     #c6daff
+inactive_border_color   #646464
